@@ -2,6 +2,7 @@ export * as Header from "./components/Header";
 export * as Loader from "./components/Loader";
 export * as Paginator from "./components/Paginator";
 export * as Auth from "./components/Auth";
+export * from "./components/BaseComponent";
 export * as DefaultLayout from "./components/Layout";
 export * as PrivacyPolicy from "./components/PrivacyPolicy";
 export * as UserContext from "./components/UserContext";
