@@ -2,7 +2,7 @@
   "exclude": [
     "node_modules",
     "lib",
-    "./src/**/*.spec.ts",
+    "./components/**/*.spec.ts",
     "./sites/**/*.spec.ts"
   ],
   "compilerOptions": {
@@ -17,11 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "outDir": "lib/esm",
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin"
-      }
-    ],
+    "plugins": [ { "name": "typescript-tslint-plugin" } ],
     "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -36,13 +32,13 @@
       "esnext"
     ],
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
   },
   "include": [
-    "./src/**/*.ts"
+    "./components/**/*.ts"
   ]
 }
