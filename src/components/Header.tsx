@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import HomeButton from "../../../public/icons/homebutton.jpeg";
-import SearchButton from "../../../public/icons/search.png";
-import BaseComponent from "../BaseComponent";
+import BaseComponent from "./BaseComponent";
+import HomeButton from "../public/icons/homebutton.jpeg";
+import SearchButton from "../public/icons/search.png";
 
 export default class Header extends BaseComponent<{
     searchSubmitted?: (term: string) => void,
@@ -26,7 +26,7 @@ export default class Header extends BaseComponent<{
   state: any = {};
 
   constructor(props: any, context: any) {
-    super()
+    super(props, context);
     this.state = {
       extraMenuItems: this.props.extraMenuItems || [],
       logoContents: this.props.logoContents || (<Link href="/" className={this.styles.headerLogo}> Notations </Link>),

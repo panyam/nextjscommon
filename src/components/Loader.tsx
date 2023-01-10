@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./View.module.scss";
 import Image from "next/image";
-import LoadingImage from "../../public/loading.gif";
+import styles from "./styles/Loader.module.scss";
+import LoadingImage from "../public/loading.gif";
 
 export class Loader extends React.Component<any> {
   state: any;
