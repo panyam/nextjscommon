@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter, withRouter } from "next/router";
 import Auth from "./Auth";
 
-class BaseComponent<PropType> extends React.Component<PropType>{
+export default class BaseComponent<PropType> extends React.Component<PropType>{
   get isLoggedIn(): boolean {
     const loggedInUser = new Auth().loggedInUser;
     return loggedInUser != null && (loggedInUser.id || "").trim() !== "";
@@ -12,5 +12,3 @@ class BaseComponent<PropType> extends React.Component<PropType>{
     return new Auth().loggedInUser;
   }
 }
-
-export default (BaseComponent);
