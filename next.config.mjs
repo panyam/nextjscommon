@@ -5,10 +5,6 @@ const finalConfig = {
   experimental: {
     externalDir: true,
   },
-  images: {
-    loader: "custom",
-    loaderFile: "./src/components/ImageLoader.js",
-  },
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
