@@ -31,17 +31,17 @@
   ],
   "scripts": {
     "clean": "rm -Rf sites/dist && rm -Rf lib && jest --clearCache && rm -rf static/lib",
-    "docs": "npx typedoc src/index.ts --name 'NextJSCommon' --out './sites/dist/docs'",
+    "docs": "npx typedoc index.ts --name 'NextJSCommon' --out './sites/dist/docs'",
     "build": "next build",
     "test": "jest --coverage --runInBand",
     "lint": "next lint",
-    "lintfix": "eslint 'src/**/*.ts' --quiet --fix --resolve-plugins-relative-to .",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lintfix": "eslint 'components/**/*.ts' --quiet --fix --resolve-plugins-relative-to .",
+    "format": "prettier --write \"components/**/*.ts\" \"components/**/*.js\"",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "prepare": "npm run build",
     "prepublishOnly": "echo prepublishOnly...",
     "preversion": "npm run build && npm run lintfix",
-    "version": "git add -A src",
+    "version": "git add -A components",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
