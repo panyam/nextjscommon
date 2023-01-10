@@ -29,7 +29,7 @@ export default class Header extends BaseComponent<{
     super(props, context);
     this.state = {
       extraMenuItems: this.props.extraMenuItems || [],
-      logoContents: this.props.logoContents || (<Link href="/" className={this.styles.headerLogo}> Notations </Link>),
+      logoContents: this.props.logoContents || (<Link href="/" className={this.styles.headerLogo}> NextJSCommon </Link>),
     };
   }
 
