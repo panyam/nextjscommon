@@ -1,0 +1,85 @@
+{
+  "name": "nextjscommon",
+  "version": "0.0.1",
+  "author": "Sriram Panyam",
+  "description": "A common set of components to be used by different nextjsXtemplates",
+  "homepage": "https://github.com/panyam/nextjscommon#readme",
+  "license": "ISC",
+  "types": "lib/cjs/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panyam/nextjscommon.git"
+  },
+  "keywords": [
+    "nextjs",
+    "common",
+    "components"
+  ],
+  "bugs": {
+    "url": "https://github.com/panyam/nextjscommon/issues"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "clean",
+    "lintfix",
+    "test"
+  ],
+  "scripts": {
+    "clean": "rm -Rf sites/dist && rm -Rf lib && jest --clearCache && rm -rf static/lib",
+    "docs": "npx typedoc src/index.ts --name 'NextJSCommon' --out './sites/dist/docs'",
+    "build": "next build",
+    "test": "jest --coverage --runInBand",
+    "lint": "next lint",
+    "lintfix": "eslint 'src/**/*.ts' --quiet --fix --resolve-plugins-relative-to .",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "prepare": "npm run build",
+    "prepublishOnly": "echo prepublishOnly...",
+    "preversion": "npm run build && npm run lintfix",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-ace": "^10.1.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.4.4",
+    "rehype-highlight": "^6.0.0",
+    "remark-frontmatter": "^4.0.1",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^13.1.1",
+    "@types/jest": "^29.2.4",
+    "@types/js-yaml": "^4.0.5",
+    "@types/react": "18.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "babel-jest": "^29.3.1",
+    "codecov": "^3.8.3",
+    "eslint": "^8.30.0",
+    "eslint-config-next": "13.1.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.3.1",
+    "jest-each": "^29.3.1",
+    "jest-mock": "^29.3.1",
+    "js-yaml": "^4.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.1",
+    "ts-jest": "^29.0.3",
+    "typedoc": "^0.23.23",
+    "typescript": "^4.9.4",
+    "typescript-tslint-plugin": "^1.0.1"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  }
+}
