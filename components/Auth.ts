@@ -1,19 +1,17 @@
 import axios from "axios";
 
-const isBrowser = typeof window !== "undefined";
-
 /**
  * Proxy/Entry point to the front end
  */
 export default class Auth {
-  seatLocations: any;
+  static SuperUserList = [] as string[];
   constructor(public readonly hostname: string = "http://localhost:3000") {
     this.hostname = hostname;
   }
 
   // Need a better way than this
   isSuperUser(user: any): boolean {
-    return user.email === "sri.panyam@gmail.com";
+    return Auth.SuperUserList.indexOf(user.email) >= 0;
   }
 
   makeUrl(path: string): string {
@@ -59,7 +57,7 @@ export default class Auth {
   }
 
   loginUrl(provider: string, callbackUrl?: string) {
-    callbackUrl = callbackUrl || (isBrowser ? window.location.href : "/");
+    callbackUrl = callbackUrl || (typeof window !== "undefined" ? window.location.href : "/");
     return this.makeUrl(`/auth/${provider}/?callbackURL=${callbackUrl}`);
   }
 }

@@ -1,12 +1,12 @@
 
-import React, { useContext, createContext, useState, useEffect } from 'react';
+import React from 'react';
 import Auth from "./Auth";
 
-export const UserContext = createContext({});
+export const UserContext = React.createContext({});
 export function UserContextProvider(props: any) {
-  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loggedInUser, setLoggedInUser] = React.useState(null);
   // console.log("LI, SLIU:", loggedInUser, setLoggedInUser, props);
-  useEffect(() => {
+  React.useEffect(() => {
     // console.log("auth.LoggedInUser: ", new Auth().loggedInUser);
     const user = new Auth().loggedInUser;
     setLoggedInUser(user);
