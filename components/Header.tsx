@@ -48,20 +48,6 @@ export default class Header extends BaseComponent<{
     );
   }
 
-  componentDidMount() {
-/*
-    if (document) {
-      document.addEventListener("click", (e) => {
-        if (e.target != this.searchButtonRef.current && e.target != this.searchInputRef.current && e.target != this.searchSubmitButtonRef.current) {
-          console.log("Clicked On: ", e.target, e);
-          this.closeSearch();
-          this.closeMenu();
-        }
-      });
-    }
-*/
-  }
-
   protected renderHomeButton() {
     const styles = this.styles;
     if (this.props.hideHomeButton) return null;
