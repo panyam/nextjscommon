@@ -38,7 +38,7 @@
     "build": "npm run clean && tsc && cp -r src/public dist && cp -r src/styles dist",
     "test": "jest --coverage --runInBand",
     "lint": "next lint",
-    "lintfix": "eslint index.ts 'src/**/*.ts' 'src/**/*.tsx' --quiet --fix --resolve-plugins-relative-to .",
+    "lintfix": "eslint 'src/**/*.ts' 'src/**/*.tsx' --quiet --fix --resolve-plugins-relative-to .",
     "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\" \"src/**/*.js\"",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "prepare": "npm run build",
