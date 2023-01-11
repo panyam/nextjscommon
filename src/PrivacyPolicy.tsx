@@ -1,3 +1,4 @@
+import React from 'react'
 
 const PrivacyPolicy = (props: any) => {
     return (

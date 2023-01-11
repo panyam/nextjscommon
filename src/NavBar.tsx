@@ -1,3 +1,4 @@
+import React from 'react';
 const navBarStyle = {
   backgroundColor: "red",
   color: "white",

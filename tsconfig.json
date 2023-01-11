@@ -34,8 +34,8 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": false,
     "incremental": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve"
+    "jsx": "react",
+    "resolveJsonModule": true
   },
   "include": [ "src" ]
 }
