@@ -46,10 +46,10 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
+    "next": "13.1.1",
     "axios": "^1.2.2"
   },
   "peerDependencies": {
-    "next": "13.0.6",
     "axios": "^1.2.2"
   },
   "devDependencies": {
