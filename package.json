@@ -1,13 +1,12 @@
 {
   "name": "@panyam/nextjscommon",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Sriram Panyam",
   "description": "A common set of components to be used by different nextjsXtemplates",
   "homepage": "https://github.com/panyam/nextjscommon#readme",
   "license": "ISC",
-  "main": "index.js",
-  "types": "dist/index.d.ts",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "dist/index.js",
   "files": [
     "styles/",
@@ -43,7 +42,7 @@
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "prepare": "npm run build",
     "preversion": "npm run build && npm run lintfix",
-    "version": "git add -A components",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
