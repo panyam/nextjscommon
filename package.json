@@ -1,6 +1,6 @@
 {
   "name": "@panyam/nextjscommon",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "author": "Sriram Panyam",
   "description": "A common set of components to be used by different nextjsXtemplates",
   "homepage": "https://github.com/panyam/nextjscommon#readme",
