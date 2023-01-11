@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./styles/Loader.module.scss";
 import LoadingImage from "./public/loading.gif";
 
-export default class Loader extends React.Component<any> {
+export class Loader extends React.Component<any> {
   state: any;
   loaderDivRef = React.createRef<HTMLDivElement>();
   constructor(props: any, context: any) {

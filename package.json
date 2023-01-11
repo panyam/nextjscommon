@@ -46,11 +46,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "next": "13.1.1",
-    "axios": "^1.2.2"
-  },
-  "peerDependencies": {
-    "axios": "^1.2.2"
+    "next": "13.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",

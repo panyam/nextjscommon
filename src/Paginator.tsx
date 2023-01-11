@@ -11,7 +11,7 @@ type Props<T> = {
   styles?: any,
 };
 
-export default class Paginator<T> extends React.Component<Props<T>> {
+export class Paginator<T> extends React.Component<Props<T>> {
   state: any;
   prevPageButtonRef = React.createRef<HTMLButtonElement>();
   pageStatusSpanRef = React.createRef<HTMLSpanElement>();

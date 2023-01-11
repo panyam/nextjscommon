@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PrivacyPolicy = (props: any) => {
+export const PrivacyPolicy = (props: any) => {
     return (
       <>
     <p>Your privacy is important to us. It is {props.appName}’s policy to respect your privacy regarding any information we may collect from you through our app, {props.appName}.</p>
@@ -20,5 +20,3 @@ const PrivacyPolicy = (props: any) => {
   </>
   )
 }
-
-export default PrivacyPolicy;

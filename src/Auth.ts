@@ -1,6 +1,4 @@
-import axios from "axios";
-
-export default interface Auth {
+export interface Auth {
   isLoggedIn(): boolean;
   readonly loggedInUser: any;
 }

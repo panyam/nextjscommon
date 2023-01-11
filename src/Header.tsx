@@ -2,11 +2,11 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Auth from "./Auth";
+import { Auth } from "./Auth";
 import HomeButton from "./public/icons/homebutton.jpg";
 import SearchButton from "./public/icons/search.png";
 
-export default class Header extends React.Component<{
+export class Header extends React.Component<{
     searchSubmitted?: (term: string) => void,
     hideHomeButton?: boolean,
     showLoginButton?: boolean,

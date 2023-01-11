@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { UserContext } from "./UserContext";
-import Auth from "./Auth";
+import { Auth } from "./Auth";
 
-export default function RouteGuard(props: any) {
+export function RouteGuard(props: any) {
   const router = useRouter();
   const [authorized, setAuthorized] = useState(false);
   const { loggedInUser, setLoggedInUser } = useContext(UserContext) as any;

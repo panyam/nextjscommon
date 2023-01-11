@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Auth from "./Auth";
+import { Auth } from "./Auth";
 
 export const UserContext = React.createContext({});
 export function UserContextProvider(props: any) {

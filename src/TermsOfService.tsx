@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TermsOfService = (props: any) => {
+export const TermsOfService = (props: any) => {
     return (
       <>
     <h2 id="1-terms">1. Terms</h2>
@@ -52,5 +52,3 @@ const TermsOfService = (props: any) => {
   </>
   )
 }
-
-export default TermsOfService;

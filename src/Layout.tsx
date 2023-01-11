@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "./Header";
-import NavBar from "./NavBar";
+import { Header } from "./Header";
+import { NavBar } from "./NavBar";
 
 const layoutStyle = {
   display: "flex",
@@ -15,7 +15,7 @@ const contentStyle = {
   flexDirection: "column",
 } as any;
 
-const Layout = (props: any) => (
+export const Layout = (props: any) => (
   <div className="Layout" style={layoutStyle}>
     <Header />
     <div className="Content" style={contentStyle}>
@@ -24,5 +24,3 @@ const Layout = (props: any) => (
     <NavBar />
   </div>
 );
-
-export default Layout;

@@ -6,10 +6,8 @@ const navBarStyle = {
   height: "60px",
 };
 
-const NavBar = () => (
+export const NavBar = () => (
   <div className="NavBar" style={navBarStyle}>
     NAVBAR
   </div>
 );
-
-export default NavBar;
