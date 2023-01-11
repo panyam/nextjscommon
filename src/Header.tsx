@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import BaseComponent from "./BaseComponent";
-import HomeButton from "../public/icons/homebutton.jpg";
-import SearchButton from "../public/icons/search.png";
+import HomeButton from "./public/icons/homebutton.jpg";
+import SearchButton from "./public/icons/search.png";
 
 export default class Header extends BaseComponent<{
     searchSubmitted?: (term: string) => void,

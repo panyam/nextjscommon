@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter, withRouter } from "next/router";
 import Auth from "./Auth";
 
 export default class BaseComponent<PropType> extends React.Component<PropType>{

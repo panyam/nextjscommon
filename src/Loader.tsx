@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./styles/Loader.module.scss";
-import LoadingImage from "../public/loading.gif";
+import LoadingImage from "./public/loading.gif";
 
-export class Loader extends React.Component<any> {
+export default class Loader extends React.Component<any> {
   state: any;
   loaderDivRef = React.createRef<HTMLDivElement>();
   constructor(props: any, context: any) {
