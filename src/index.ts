@@ -1,4 +1,3 @@
-import BaseComponent from "./BaseComponent";
 import Header from "./Header";
 import Loader from "./Loader";
 import Paginator from "./Paginator";
@@ -10,7 +9,6 @@ import TermsOfService from "./TermsOfService";
 import RouteGuard from "./RouteGuard";
 
 export {
-  BaseComponent,
   Header,
   Loader,
   Paginator,

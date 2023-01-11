@@ -2,11 +2,11 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import BaseComponent from "./BaseComponent";
+import Auth from "./Auth";
 import HomeButton from "./public/icons/homebutton.jpg";
 import SearchButton from "./public/icons/search.png";
 
-export default class Header extends BaseComponent<{
+export default class Header extends React.Component<{
     searchSubmitted?: (term: string) => void,
     hideHomeButton?: boolean,
     showLoginButton?: boolean,
@@ -17,6 +17,7 @@ export default class Header extends BaseComponent<{
     extraMenuItems?: [string, string, string][],
     logoContents?: any,
     styles?: any,
+    auth?: Auth,
   }> {
   menuButtonRef = React.createRef<HTMLInputElement>();
   searchButtonRef = React.createRef<HTMLInputElement>();
@@ -108,7 +109,7 @@ export default class Header extends BaseComponent<{
   protected renderDefaultMenuItems() {
     const out = [];
     out.push(this.renderMenuItem("Blog", "listItemBlog", "/blog"));
-    if (this.isLoggedIn) {
+    if (this.props.auth?.isLoggedIn) {
       if (this.props.showLogoutButton) {
         out.push(this.renderMenuItem("Logout", "listItemLogout", "/auth/logout"));
       }

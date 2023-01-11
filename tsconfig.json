@@ -35,7 +35,6 @@
     "noEmit": false,
     "incremental": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve"
   },
   "include": [ "src" ]

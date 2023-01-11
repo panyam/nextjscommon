@@ -34,7 +34,7 @@ export default function RouteGuard(props: any) {
     if (path.endsWith("/")) {
       path = path.substring(0, path.length - 1);
     }
-    return props.privatePaths.includes(path) || path.endsWith("/new") || path.endsWith("/compose");
+    return props.privatePaths.includes(path);
   }
 
   function authCheck(url: string) {
@@ -42,7 +42,7 @@ export default function RouteGuard(props: any) {
     console.log("Url: ", url);
     const publicPaths = props.publicPaths || ["/login", "/"];
     const path = url.split("?")[0];
-    const loggedInUser = new Auth().loggedInUser;
+    const loggedInUser = props.auth?.loggedInUser || null;
     const isLoggedIn = loggedInUser != null && (loggedInUser.id || "").trim() !== "";
     const needsLogin = !publicPaths.includes(path) && !isLoggedIn && isPrivatePath(path);
     setAuthorized(!needsLogin);

@@ -8,7 +8,7 @@ export function UserContextProvider(props: any) {
   // console.log("LI, SLIU:", loggedInUser, setLoggedInUser, props);
   React.useEffect(() => {
     // console.log("auth.LoggedInUser: ", new Auth().loggedInUser);
-    const user = new Auth().loggedInUser;
+    const user = props.auth?.loggedInUser || null;
     setLoggedInUser(user);
   }, []);
 
