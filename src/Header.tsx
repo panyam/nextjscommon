@@ -16,6 +16,7 @@ export class Header extends React.Component<{
     searchResultsPanel?: any,
     extraMenuItems?: [string, string, string][],
     logoContents?: any,
+    logoTitle?: any,
     styles?: any,
     auth?: Auth,
   }> {
@@ -30,7 +31,7 @@ export class Header extends React.Component<{
     super(props, context);
     this.state = {
       extraMenuItems: this.props.extraMenuItems || [],
-      logoContents: this.props.logoContents || (<Link href="/" className={this.styles.headerLogo}> NextJSCommon </Link>),
+      logoContents: this.props.logoContents || (<Link href="/" className={this.styles.headerLogo}> { this.props.logoTitle || "NextJSCommon" } </Link>),
     };
   }
 
