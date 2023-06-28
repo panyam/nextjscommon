@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import defaultStyles from "./styles/Paginator.module.scss"
 
 type Props<T> = {
   currPage?: number;
@@ -31,7 +32,7 @@ export class Paginator<T> extends React.Component<Props<T>> {
   }
     
   get styles() {
-    return this.props.styles || {};
+    return this.props.styles || defaultStyles;
   }
 
   render() {

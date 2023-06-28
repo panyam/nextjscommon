@@ -1,4 +1,5 @@
 export { Header } from "./Header";
+export { NavBar } from "./NavBar";
 export { Loader } from "./Loader";
 export { Paginator } from "./Paginator";
 export { Auth } from "./Auth";
